@@ -8,8 +8,8 @@ tinybench uses the Go [exec](https://golang.org/pkg/os/exec/) package to run Jav
 
 ## Requirements
 
-Go (1.16 or higher)
-Node.js
+- Go (1.16 or higher)
+- Node.js
 
 ## Installation
 
@@ -36,17 +36,7 @@ You should now be able to run tinybench from anywhere on your system.
 
 ## Usage
 
-Use the `// tinybench start` and `// tinybench stop` delimiters in your JavaScript file to define the code snippets you want to benchmark. Then, run the tinybench command, passing in the filepath:
-
-```bash
-tinybench path/to/jsFile.js
-```
-
-You can create as many benchmarks in the same file as you want by adding more pairs of delimiters.
-
-## Example
-
-Here's an example of a JavaScript file that uses tinybench to benchmark two different for loops:
+Use the `// tinybench start` and `// tinybench stop` delimiters in your JavaScript file to define the code snippets you want to benchmark. You can create as many benchmarks as you want by adding more pairs of delimiters. Here is an example of a file that compares two different for loops:
 
 ```javascript
 function forLoop(arr) {
@@ -68,6 +58,12 @@ forLoop(arr);
 // tinybench start
 forOfLoop(arr);
 // tinybench stop
+```
+
+Run the tinybench command and pass in the filepath:
+
+```bash
+tinybench path/to/jsFile.js
 ```
 
 
